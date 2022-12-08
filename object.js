@@ -6,9 +6,11 @@ class User {
   }
   login() {
     console.log("Login: " + this.name)
+    return this
   }
   logout() {
     console.log("Logout: " + this.name)
+    return this
   }
 }
 
