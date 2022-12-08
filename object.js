@@ -14,7 +14,14 @@ class User {
   }
 }
 
+class Admin extends User {
+  deleteUser(user) {
+    return (users = users.filter((u) => u.email != user.email))
+  }
+}
+
 const userOne = new User("Fred", 12, "fred@test.com")
 const userTwo = new User("Harry", 23, "harry@test.com")
+const admin = new Admin("Her", 25, "her@test.com")
 
-const users = [userOne, userTwo]
+let users = [userOne, userTwo, admin]
